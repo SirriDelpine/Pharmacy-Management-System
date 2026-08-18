@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact PharmaCare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="index.html">PharmaCare</a>
+    <button class="sidebar-toggle" type="button" id="togglebtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="index.html#contact" class="active">Contact</a>
+        <a class="btn outline login-btn" href="login.php">Login</a>
+        <a class="btn register-btn" href="register.php">Register</a>
+        <a class="readme-btn" href="readme.html">Read Me</a>
+    </nav>
+</header>
+<section class="section-heading" id="contact">
+    <h2>Get in touch</h2>
+    <p>Ready to streamline your pharmacy workflow? Contact us to schedule a demo or request support.</p>
+</section>
+<section class="contact-grid">
+    <div class="contact-card">
+        <strong>Send us a message</strong>
+        <p>Reach out for product details, pricing, or implementation help. We are here to support your pharmacy every step of the way.</p>
+        <div class="contact-info">
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <strong>Email</strong>
+                    <p>support@pharmacare.com</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <strong>Phone</strong>
+                    <p>+1 800 123 4567</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <strong>Address</strong>
+                    <p>123 Pharmacy Plaza, Wellness City</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-card">
+        <strong>Need immediate assistance?</strong>
+        <p>Use the contact form below in your final version to let customers submit requests directly from the homepage.</p>
+    </div>
+</section>
+<footer>
+    <p>© 2026 PharmaCare. All rights reserved.</p>
+</footer>
+<script>
+    const toggleBtn = document.getElementById('togglebtn');
+    const navbar = document.getElementById('navbar');
+    if (toggleBtn && navbar) {
+        toggleBtn.addEventListener('click', () => navbar.classList.toggle('active'));
+    }
+    document.querySelectorAll('.navbar a').forEach(link => link.addEventListener('click', () => navbar.classList.remove('active')));
+</script>
+</body>
+</html>

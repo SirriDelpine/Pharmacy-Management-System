@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register — PharmaCare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="index.html">PharmaCare</a>
+    <button class="sidebar-toggle" type="button" id="togglebtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="btn outline login-btn" href="login.php">Login</a>
+        <a class="btn register-btn" href="register.html">Register</a>
+        <a class="readme-btn" href="readme.html">Read Me</a>
+    </nav>
+</header>
+<section class="auth-page">
+    <div class="auth-card">
+        <h2>Create your PharmaCare account</h2>
+        <form action="#">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+            <label for="confirm-password">Confirm password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <p class="small-link">Already have an account? <a href="login.php">Login here</a>.</p>
+    </div>
+</section>
+<footer>
+    <p>© 2026 PharmaCare. All rights reserved.</p>
+</footer>
+<script>
+    const toggleBtn = document.getElementById('togglebtn');
+    const navbar = document.getElementById('navbar');
+    if (toggleBtn && navbar) {
+        toggleBtn.addEventListener('click', () => navbar.classList.toggle('active'));
+    }
+
+    document.querySelectorAll('.navbar a').forEach(link => link.addEventListener('click', () => navbar.classList.remove('active')));
+</script>
+</body>
+</html>

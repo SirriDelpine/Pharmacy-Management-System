@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — PharmaCare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="index.html">PharmaCare</a>
+    <button class="sidebar-toggle" type="button" id="togglebtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services" class="active">Services</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="btn outline login-btn" href="login.php">Login</a>
+        <a class="btn register-btn" href="register.php">Register</a>
+        <a class="readme-btn" href="readme.html">Read Me</a>
+    </nav>
+</header>
+<section class="section-heading" id="services">
+    <h2>Our Services</h2>
+    <p>Everything you need to run a pharmacy smoothly, from purchase orders to sales, reports, and customer management.</p>
+</section>
+<section class="services-grid">
+    <div class="service-card">
+        <i class="fa-solid fa-capsules"></i>
+        <h3>Inventory Management</h3>
+        <p>Track medicines, stock levels, expiry dates and reorder alerts using one dashboard.</p>
+    </div>
+    <div class="service-card">
+        <i class="fa-solid fa-receipt"></i>
+        <h3>Billing & Sales</h3>
+        <p>Quick billing, discounts, and secure invoice generation for every transaction.</p>
+    </div>
+    <div class="service-card">
+        <i class="fa-solid fa-user-doctor"></i>
+        <h3>Patient Profiles</h3>
+        <p>Store prescription history, medication records, and customer details with ease.</p>
+    </div>
+</section>
+<footer>
+    <p>© 2026 PharmaCare. All rights reserved.</p>
+</footer>
+<script>
+    const toggleBtn = document.getElementById('togglebtn');
+    const navbar = document.getElementById('navbar');
+    if (toggleBtn && navbar) {
+        toggleBtn.addEventListener('click', () => navbar.classList.toggle('active'));
+    }
+    document.querySelectorAll('.navbar a').forEach(link => link.addEventListener('click', () => navbar.classList.remove('active')));
+</script>
+</body>
+</html>
